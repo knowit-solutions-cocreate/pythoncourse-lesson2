@@ -2,7 +2,7 @@
 
 ## Project setup
 
-1. Install the [Python](vscode:extension/ms-python.python) and [SQLite Viewer](vscode:extension/qwtel.sqlite-viewer) VSCode extensions
+1. Install the <a href="vscode:extension/ms-python.python">Python</a>  and <a href="vscode:extension/qwtel.sqlite-viewer">SQLite Viewer</a> VSCode extensions
 2. Install the Python code:
     ```console
     pip install --editable ./
