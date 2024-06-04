@@ -3,13 +3,18 @@
 ## Project setup
 
 1. Install the [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [SQLite Viewer](https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer) VSCode extensions
-2. Install the Python code:
+2. Create a virtual Python environment and activate it:
     ```console
-    pip install --editable ./
+    py -m venv venv
+    .\venv\Scripts\activate
     ```
-3. Setup the SQLite database:
+3. Install the Python code:
+    ```console
+    py -m pip install --editable ./
     ```
-    # TODO setup commands
+4. Setup the SQLite database:
     ```
-4. Open SQLite browser by TODO
-
+    lesson2 db create
+    lesson2 db populate
+    ```
+5. Open SQLite browser by TODO
