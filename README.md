@@ -17,4 +17,4 @@
     lesson2 db create
     lesson2 db populate
     ```
-5. Open SQLite browser by TODO
+5. Open SQLite browser by opening lesson2.db in the VSCode file explorer
