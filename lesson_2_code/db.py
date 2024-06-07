@@ -13,11 +13,12 @@ def get_engine():
 
 
 def populate():
-    db_engine = get_engine()
-
+    example_df = pd.DataFrame({'my_1st_col': [0, 1], 'my_2nd_col': [3, 4]})
     people_df = pd.read_csv('data/people.csv')
     planets_df = pd.read_csv('data/planets.csv')
 
+    db_engine = get_engine()
+    example_df.to_sql('example', db_engine, if_exists="replace", index=False)
     people_df.to_sql('people', db_engine, if_exists="replace", index=False)
     planets_df.to_sql('planets', db_engine, if_exists="replace", index=False)
     # TODO create joined version here?
