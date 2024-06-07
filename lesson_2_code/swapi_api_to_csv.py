@@ -58,8 +58,8 @@ def clean_homeplanet_id(dataframe: pd.DataFrame):
 
 
 def main():
-    resource_to_csv(resource_name="people", csv_name="swapi_people.csv")
-    resource_to_csv(resource_name="planets", csv_name="swapi_planets.csv")
+    resource_to_csv(resource_name="people", csv_name="data/swapi_people.csv")
+    resource_to_csv(resource_name="planets", csv_name="data/swapi_planets.csv")
 
 
 if __name__ == "__main__":
