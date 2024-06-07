@@ -1,11 +1,19 @@
 import sqlite3
+from contextlib import contextmanager
 
 import sqlalchemy
 import pandas as pd
 
 
 def create():
-    sqlite3.connect('lesson2.db')
+    with connect():
+        pass  # connecting and doing nothing implicitly creates it
+
+
+@contextmanager
+def connect():
+    with sqlite3.connect('lesson2.db') as connection:
+        yield connection
 
 
 def get_engine():
