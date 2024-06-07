@@ -20,12 +20,16 @@ def join_into_table(db_engine):
     joined_df.to_sql("homeworlds", db_engine, if_exists="replace", index=False)
 
 
-# TODO put stub for pandas join here?
+def pandas_join_into_table(db_engine):
+    # TODO achieve the same result as `join_into_table`, but by first
+    # reading the entire tables into pandas DataFrames, then
+    # joining them using pandas, before inserting them into the "homeworlds" table
+    ...
 
 
 def main():
     db_engine = db.get_engine()
-    join_into_table(db_engine)
+    join_into_table(db_engine)  # TODO replace with `pandas_join_into_table`
 
 
 if __name__ == "__main__":
