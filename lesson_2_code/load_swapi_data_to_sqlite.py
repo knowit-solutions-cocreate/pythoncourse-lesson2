@@ -6,8 +6,8 @@ import pandas as pd
 from pathlib import Path
 
 
-PEOPLE_CSV_PATH = Path("./data/swapi_people.csv")
-PLANETS_CSV_PATH = Path("./data/swapi_planets.csv")
+PEOPLE_CSV_PATH = Path("./data/people.csv")
+PLANETS_CSV_PATH = Path("./data/planets.csv")
 
 
 def load_people_csv(conn, people_csv_path):
