@@ -1,8 +1,9 @@
-import sqlite3
 import pandas as pd
 
+import db
 
-def join_into_table(conn):
+
+def join_into_table(db_engine):
 
     sql = """
     SELECT
@@ -15,13 +16,16 @@ def join_into_table(conn):
     LEFT JOIN planets pl ON p.homeworld = pl.url;
     """
 
-    joined_df = pd.read_sql_query(sql, conn)
-    joined_df.to_sql("people_homeworlds", conn, if_exists="replace", index=False)
+    joined_df = pd.read_sql_query(sql, db_engine)
+    joined_df.to_sql("homeworlds", db_engine, if_exists="replace", index=False)
+
+
+# TODO put stub for pandas join here?
 
 
 def main():
-    with sqlite3.connect("swapi.db") as conn:
-        join_into_table(conn)
+    db_engine = db.get_engine()
+    join_into_table(db_engine)
 
 
 if __name__ == "__main__":
