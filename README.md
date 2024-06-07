@@ -34,6 +34,7 @@ You can always start over by deleting lesson2.db and recreating it using the ins
 
 ### 1. Replace SQL-side join with a Python/pandas-side join
 In lesson_2_code/populate_homeworlds_table.py there is a pure SQL-query which populates a table by combining the people information with that about their home planets.
+
 Task: replace the SQL-side join with logic that loads the two tables into pandas dataframes, carries out the join using pandas then loads the result back using the `.to_sql` function.
 
 Hints:
