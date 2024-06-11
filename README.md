@@ -60,7 +60,7 @@ Hints: the convenience function `pd.to_numeric` usually does what you want in th
 #### c. Represent mass and birth_year as float
 Task: convert the string representations of the mass and birth_year columns to float.
 
-Hints: This is trickier than b because a little bit of string-preprocessing is required before `pd.to_numeric` will work. Namely, there is a decimal comma that need to replaced with a regular decimal dot and a "BBY" (short for "Before the Battle of Yavin", apparently) substring that needs to be removed. In pandas, you can access convenience string manipulation functions in the `pd.Series.str` property: try typing `df["mass"].str.` into VSCode and scroll through the suggestions to find what you need.
+Hints: This is trickier than b because a little bit of string-preprocessing is required before `pd.to_numeric` will work. Namely, there is a decimal comma that needs to replaced with a regular decimal dot and a "BBY" (short for "Before the Battle of Yavin", apparently) substring that needs to be removed. In pandas, you can access convenience string manipulation functions in the `pd.Series.str` property: try typing `df["mass"].str.` into VSCode and scroll through the suggestions to find what you need.
 
 #### d. Save the result in a new table
 Task: save the result of applying all the three cleaning procedures to a new table.
