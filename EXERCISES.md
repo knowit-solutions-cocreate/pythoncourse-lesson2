@@ -43,13 +43,18 @@ Task: save the result of applying all the three cleaning procedures to a new tab
 
 Hints: lesson_2_code/sql_write_to_example.py.
 
-### 3. Add new entries to a table using requests, an f-string-formatted query URL, dictionary lookup and a loop
+### 3. Update the people SQL table using REST and Python logic
 Note that this is *hard*!
 
-Task: TODO
+The provided "people" table is actually incomplete. More specifically, there are a few entries in the [source API](https://swapi.dev/documentation) that have not yet been added to the bottom of the table.
+
+Task: query the source API for people entries that have not yet been added to the people table, construct a dataframe and append it to the people table.
 
 Hints:
-- TODO example code that queries a different swapi resource (perhaps films, because it's small), constructs a dataframe from the list of dicts then prints it
+- lesson_2_code/fetch_swapi_films.py has an example of fetching from the source API.
+- you can find out when data was last added to the people table by taking the max of the index column or the created column - the former is much easier because it corresponds to the number in the REST query
+- you can take the maximum SQL side by using `pd.read_sql_query` or pandas side by using `pd.read_sql_table`
+- use the if `if_exists='append'` argument when loading it to the database
 
 
 ## Bonus exercises
