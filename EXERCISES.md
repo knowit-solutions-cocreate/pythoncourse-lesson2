@@ -56,7 +56,7 @@ Hints:
 - you can take the maximum SQL side by using `pd.read_sql_query` or pandas side by using `pd.read_sql_table`
 - to ensure you fetch the last entry, you can either use a `for` loop and `break` when you're done, or a `while` loop
 - you either need to correctly format a single dict to pass to `pd.DataFrame`, or find a constructor that handles the formatting you happen to have
-- use the if `if_exists='append'` argument when loading it to the database
+- use the if `if_exists='append'` argument when loading the new rows into the database
 
 
 ## Bonus exercises
