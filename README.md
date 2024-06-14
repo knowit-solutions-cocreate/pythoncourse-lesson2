@@ -5,9 +5,9 @@ The main topic of this part is how to integrate data-processing Python (and pand
 
 Study plan suggestion:
 1. Study the project code briefly by having a glimpse at all the files
-2. Run the [Project setup](#project-setup) steps
-3. Do some or all of the [Exercises](EXERCISES.md)
-4. Have a look at [Further reading](#further-reading)
+2. Run the [project setup](#project-setup) steps
+3. Do some or all of the [exercises](EXERCISES.md)
+4. Have a look at [further reading](#further-reading)
 
 Good luck!
 
