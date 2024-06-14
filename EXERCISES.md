@@ -55,7 +55,7 @@ Hints:
 ## Bonus exercises
 
 ### 1. Extend the command line interface
-TODO
+The command line interface, that is used to run `lesson2 db create` and `lesson2 db populate` setup steps, is implemented in lesson_2_code/\_\_init__.py. How it works should be fairly clear from the code and the output of `lesson2 --help` and `lesson2 db --help`. Try adding a new "action" for populating the homeworlds table or, if you did all three main exercise, why not an action that first fetches new data is in main exercise 3, then refreshes the other tables?
 
 ### 2. Publish your package (locally to yourself)
 Full package publication to a remote package index (place online that others can install your Python code from) is beyond the scope of this tutorial, but here is a local example that should give you some understanding of what's going on and more confidence for when you do need to publish something properly :)
