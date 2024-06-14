@@ -78,9 +78,17 @@ Hints:
 
 ## Further reading
 
-TODO cover
-- Poetry
-- Polars
-- what connecting to a "more real" database e.g. PostreSQL or SQLServer may look like
-- (maybe) typing
-- anything that feels like a natural next learning step
+### Connecting to "real" databases
+The interaction between pandas and SQLite of the present code is handled by an "engine" object, see lesson_2_code/db.py. Initialization of an engine object for interaction with your production database of choice is generally a matter of driver installation, construction of a connection string and authentication. For Postgres, for example, drivers can be installed via the pip package psycopg2 and authentication provided directly in the connection string like so:
+```Python
+password = os.environ["edvardspostgres_pw"]  # store in environment variable to hide from code
+engine = sqlalchemy.create_engine(f"postgresql+psycopg2://edvard:{password}@localhost:5432/edvardsdb")
+```
+
+Guides for connecting to various types of databases, including Microsoft SQL Server, can be found in the [SQLAlchemy documentation](https://docs.sqlalchemy.org/en/20/core/engines.html).
+
+### Higher level tools for project setup
+For simplicity, the present project uses the core tools `venv` and `pip` for management of virtual environment and dependencies. You will find that larger Python projects tend to delegate these tasks to higher level tools, such as [Poetry](https://python-poetry.org/). Some of the reasons are:
+- to not have to explicitly create and activate the virtual environment
+- to, in addition to the list of dependency version constraints (see setup.py), also maintain a "lock file" with exact versions to be able to more reliably reinstall them
+- configurability of many development tools in a single project file
