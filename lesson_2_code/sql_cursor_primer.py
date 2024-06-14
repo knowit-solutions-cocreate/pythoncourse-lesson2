@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """
 This module shows some examples on how to
 create, populate, and interact with a SQLite
