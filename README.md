@@ -49,3 +49,7 @@ For simplicity, the present project uses the core tools `venv` and `pip` for man
 - to not have to explicitly create and activate the virtual environment
 - to, in addition to the list of dependency version constraints (see setup.py), also maintain a "lock file" with exact versions to be able to more reliably reinstall them
 - configurability of many development tools in a single project file
+- ability to build and publish one's code with a single tool
+
+### Publishing code
+[Packaging Python Projects](https://packaging.python.org/en/latest/tutorials/packaging-projects/) is a guide on how to publish a package to a remote package index. For making Python packages installable to colleagues, there are different options for hosting a protected package index. [Azure DevOps Artifacts](https://learn.microsoft.com/en-us/azure/devops/artifacts/concepts/feeds?view=azure-devops) is one.

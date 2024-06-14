@@ -5,6 +5,7 @@ setup(
     name='lesson_2_code',
     version='0.1.0',
     python_requires='>=3.12',
+    packages=['lesson_2_code'],
     install_requires=[
         'setuptools >= 68.2.2, < 69',
         'sqlalchemy >= 2.0.30, < 2.1',
@@ -13,4 +14,3 @@ setup(
     ],
     entry_points={'console_scripts': ['lesson2=lesson_2_code:cli']}
 )
-

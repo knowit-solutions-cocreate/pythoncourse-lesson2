@@ -54,6 +54,24 @@ Hints:
 
 ## Bonus exercises
 
-- TODO CLI operation
-- TODO publish package
-- TODO any more?
+### 1. Extend the command line interface
+TODO
+
+### 2. Publish your package (locally to yourself)
+Full package publication to a remote package index (place online that others can install your Python code from) is beyond the scope of this tutorial, but here is a local example that should give you some understanding of what's going on and more confidence for when you do need to publish something properly :)
+
+First, pip install the "build" package, then use it to build your package to a local location:
+```console
+py -m build -o package-index/lesson-2-code
+```
+If you have a look inside the generated folder, you will find that there is nothing that foreign in there - just a compressed archive (.tar.gz) of the code, named according to a convention that includes the package version. Furthermore, the folder package-index is now a fully valid package index. To make it available (to your own computer, at least), serve its contents using Python's built-in web server:
+```console
+cd package-index
+py -m http.server  # serve folder content to http://localhost:8000
+```
+
+While the webserver is running in one Powershell terminal, you may open a new one, create an entirely new virtual environment in it, then install the code via the web server:
+```console
+py -m pip install --extra-index-url http://localhost:8000 lesson-2-code
+```
+And voilà! You should find that not only the project code became available as an importable package, but also the CLI. Have a look in further reading for hints on where you can learn to publish packages indexes accessible by others.
