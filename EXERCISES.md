@@ -52,11 +52,12 @@ Task: query the source API for people entries that have not yet been added to th
 
 Hints:
 - lesson_2_code/fetch_swapi_films.py has an example of fetching from the source API.
-- you can find out when data was last added to the people table by taking the max of the index column or the created column - the former is much easier because it corresponds to the number in the REST query
+- you can find out when data was last added to the people table by taking the max of the person_no column or the created column - the former is much easier because it corresponds to the number in the REST query
 - you can take the maximum SQL side by using `pd.read_sql_query` or pandas side by using `pd.read_sql_table`
 - to ensure you fetch the last entry, you can either use a `for` loop and `break` when you're done, or a `while` loop
-- you either need to correctly format a single dict to pass to `pd.DataFrame`, or find a constructor that handles the formatting you happen to have
-- use the if `if_exists='append'` argument when loading the new rows into the database
+- you may construct the `pd.DataFrame` with the new entries by passing either a dict or a list
+- you may use the `if_exists='append'` argument when loading the new rows into the database
+- you may run into an SQL error due to some columns containing Python objects that cannot be loaded into SQL - you can either drop them or convert them to string
 
 
 ## Bonus exercises
